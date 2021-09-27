@@ -1,16 +1,24 @@
 {
-	"name": "fcc-learn-npm-package-json",
-	"description": "A project that does something wowsome",
-	"dependencies": {
-		"express": "^4.14.0"
-	},
-	"main": "server.js",
-	"scripts": {
-		"start": "node server.js"
-	},
-	"author": "Varun Sureshkumar",
-	"repository": {
-		"type": "git",
-		"url": "https://idontknow/todo.git"
-	}
+  "name": "fcc-learn-npm-package-json",
+  "description": "A project that does something wowsome",
+  "keywords": [
+    "freecodecamp",
+    "related",
+    "words"
+  ],
+  "license": "MIT",
+  "version": "1.2.0",
+  "dependencies": {
+    "express": "^4.14.0",
+    "moment": "^2.10.2"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Varun Sureshkumar",
+  "repository": {
+    "type": "git",
+    "url": "https://idontknow/todo.git"
+  }
 }
