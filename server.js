@@ -5,6 +5,7 @@
 
 const fs = require('fs');
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
 
@@ -32,9 +33,15 @@ if (!process.env.DISABLE_XORIGIN) {
 })); */
 
 app.get('/json', (req, res) => {
-  res.json({
-    message: 'Hello json',
-  });
+  if (process.env.MESSAGE_STYLE === "uppercase") {
+    res.json({
+      message: 'Hello json'.toUpperCase(),
+    });
+  } else {
+    res.json({
+      message: 'Hello json',
+    });
+  }
 });
 
 app.use('/public', express.static(`${process.cwd()}/public`));
