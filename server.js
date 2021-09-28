@@ -28,11 +28,11 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
-/* app.get('/json', (req, res) => res.type('txt').json({
+app.get('/json', (req, res) => res.type('txt').json({
   message: 'Hello json',
-})); */
+}));
 
-app.get('/json', (req, res) => {
+/* app.get('/json', (req, res) => {
   if (process.env.MESSAGE_STYLE === 'uppercase') {
     res.json({
       message: 'Hello json'.toUpperCase(),
@@ -42,7 +42,7 @@ app.get('/json', (req, res) => {
       message: 'Hello json',
     });
   }
-});
+});  */
 
 app.use('/public', express.static(`${process.cwd()}/public`));
 
